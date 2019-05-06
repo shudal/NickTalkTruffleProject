@@ -1,0 +1,104 @@
+{
+  "contractName": "IMainServer",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.4.24+commit.e67f0147\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/shudal/Projects/BlockChain/NickTalk/contracts/server/interfaces/IMainServer.sol\":\"IMainServer\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/shudal/Projects/BlockChain/NickTalk/contracts/server/interfaces/IMainServer.sol\":{\"keccak256\":\"0xc3e21847ac67e784bd711fa769021b29ce27db39b11071f12e927262b1af7d03\",\"urls\":[\"bzzr://42734ec2a1916d3d8715eff1d5b97ddde7668ca1e793813e5d19327c4231ae65\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a7230582037e86db29bf7866caaf01a1542286ff60c492ee4acfbeebc13401c8612ca8e200029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a7230582037e86db29bf7866caaf01a1542286ff60c492ee4acfbeebc13401c8612ca8e200029",
+  "sourceMap": "26:25:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:25:3;;;;;;;",
+  "deployedSourceMap": "26:25:3:-;;;;;",
+  "source": "pragma solidity ^0.4.24;\n\ncontract IMainServer {\n\n}",
+  "sourcePath": "/home/shudal/Projects/BlockChain/NickTalk/contracts/server/interfaces/IMainServer.sol",
+  "ast": {
+    "absolutePath": "/home/shudal/Projects/BlockChain/NickTalk/contracts/server/interfaces/IMainServer.sol",
+    "exportedSymbols": {
+      "IMainServer": [
+        120
+      ]
+    },
+    "id": 121,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 119,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 120,
+        "linearizedBaseContracts": [
+          120
+        ],
+        "name": "IMainServer",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 121,
+        "src": "26:25:3"
+      }
+    ],
+    "src": "0:51:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/shudal/Projects/BlockChain/NickTalk/contracts/server/interfaces/IMainServer.sol",
+    "exportedSymbols": {
+      "IMainServer": [
+        120
+      ]
+    },
+    "id": 121,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 119,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 120,
+        "linearizedBaseContracts": [
+          120
+        ],
+        "name": "IMainServer",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 121,
+        "src": "26:25:3"
+      }
+    ],
+    "src": "0:51:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.8",
+  "updatedAt": "2019-05-06T03:11:11.836Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

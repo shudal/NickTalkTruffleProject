@@ -1,0 +1,1681 @@
+{
+  "contractName": "ContractRegistry",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "acceptOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "newOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_contractName",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "_contractAddress",
+          "type": "address"
+        }
+      ],
+      "name": "AddressUpdate",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_prevOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnerUpdate",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_contractName",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getAddress",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_contractName",
+          "type": "bytes32"
+        },
+        {
+          "name": "_contractAddress",
+          "type": "address"
+        }
+      ],
+      "name": "registerAddress",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.4.24+commit.e67f0147\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"_contractName\",\"type\":\"bytes32\"}],\"name\":\"getAddress\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_contractName\",\"type\":\"bytes32\"},{\"name\":\"_contractAddress\",\"type\":\"address\"}],\"name\":\"registerAddress\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"acceptOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"newOwner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"_contractName\",\"type\":\"bytes32\"},{\"indexed\":false,\"name\":\"_contractAddress\",\"type\":\"address\"}],\"name\":\"AddressUpdate\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"_prevOwner\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"_newOwner\",\"type\":\"address\"}],\"name\":\"OwnerUpdate\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"acceptOwnership()\":{\"details\":\"used by a new owner to accept an ownership transfer\"},\"getAddress(bytes32)\":{\"details\":\"returns the address associated with the given contract name\",\"params\":{\"_contractName\":\"contract name\"},\"return\":\"contract address\"},\"registerAddress(bytes32,address)\":{\"details\":\"registers a new address for the contract name\",\"params\":{\"_contractAddress\":\"contract address\",\"_contractName\":\"contract name\"}},\"transferOwnership(address)\":{\"details\":\"allows transferring the contract ownership the new owner still needs to accept the transfer can only be called by the contract owner\",\"params\":{\"_newOwner\":\"new contract owner\"}}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/shudal/Projects/BlockChain/NickTalk/contracts/utility/ContractRegistry.sol\":\"ContractRegistry\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/shudal/Projects/BlockChain/NickTalk/contracts/utility/ContractRegistry.sol\":{\"keccak256\":\"0x00672962d081fb2689761596d1ca0b9ea9a94800a6f0a7ecc6259fb0b25dd97f\",\"urls\":[\"bzzr://88d1c21bd56eec4329d74cd6e3fad2cac45bd4fb283b05e3475364892d6a1888\"]},\"/home/shudal/Projects/BlockChain/NickTalk/contracts/utility/Owned.sol\":{\"keccak256\":\"0xcfe877a1861adc601a5522a6e34687a0ca9d44e5b7cbad3d881a41d1a7628506\",\"urls\":[\"bzzr://024e440644d84ce83fb0dce39806c40c80f220cba69ebcb0187541b17b8a4f74\"]},\"/home/shudal/Projects/BlockChain/NickTalk/contracts/utility/interfaces/IContractRegistry.sol\":{\"keccak256\":\"0x4b004a004406f40da5bc5c12cbe09c1a7f647db7aac083953ffcea0cbca7f8d2\",\"urls\":[\"bzzr://20637b52a3f30c1fff9a604389e06baa787e7f7ba03f39a7e237573d11228ff1\"]},\"/home/shudal/Projects/BlockChain/NickTalk/contracts/utility/interfaces/IOwned.sol\":{\"keccak256\":\"0x7165266069416d0d031dbf0ba7a43c0d33c39ac804219562472939356420a441\",\"urls\":[\"bzzr://4e459502722bb6ee8da98748e70eb0dee94ec057c5c4d80f1ced7e3a5fdbc756\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060008054600160a060020a03191633179055610306806100326000396000f3006080604052600436106100775763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166321f8a721811461007c578063662de379146100b057806379ba5097146100d65780638da5cb5b146100eb578063d4ee1d9014610100578063f2fde38b14610115575b600080fd5b34801561008857600080fd5b50610094600435610136565b60408051600160a060020a039092168252519081900360200190f35b3480156100bc57600080fd5b506100d4600435600160a060020a0360243516610151565b005b3480156100e257600080fd5b506100d46101d6565b3480156100f757600080fd5b5061009461025e565b34801561010c57600080fd5b5061009461026d565b34801561012157600080fd5b506100d4600160a060020a036004351661027c565b600090815260026020526040902054600160a060020a031690565b600054600160a060020a0316331461016557fe5b600082815260026020908152604091829020805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0385169081179091558251908152915184927ffc08d1253c81bcd5444fc7056ef1f5a5df4c9220b6fd70d7449267f1f0f2991892908290030190a25050565b600154600160a060020a031633146101ed57600080fd5b60015460008054604051600160a060020a0393841693909116917f343765429aea5a34b3ff6a3785a98a5abb2597aca87bfbb58632c173d585373a91a3600180546000805473ffffffffffffffffffffffffffffffffffffffff19908116600160a060020a03841617909155169055565b600054600160a060020a031681565b600154600160a060020a031681565b600054600160a060020a0316331461029057fe5b600054600160a060020a03828116911614156102ab57600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a723058200948618838b566412e4841879ae9a1ada45332dd4eb1db6fea1c63d2d1c640900029",
+  "deployedBytecode": "0x6080604052600436106100775763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166321f8a721811461007c578063662de379146100b057806379ba5097146100d65780638da5cb5b146100eb578063d4ee1d9014610100578063f2fde38b14610115575b600080fd5b34801561008857600080fd5b50610094600435610136565b60408051600160a060020a039092168252519081900360200190f35b3480156100bc57600080fd5b506100d4600435600160a060020a0360243516610151565b005b3480156100e257600080fd5b506100d46101d6565b3480156100f757600080fd5b5061009461025e565b34801561010c57600080fd5b5061009461026d565b34801561012157600080fd5b506100d4600160a060020a036004351661027c565b600090815260026020526040902054600160a060020a031690565b600054600160a060020a0316331461016557fe5b600082815260026020908152604091829020805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0385169081179091558251908152915184927ffc08d1253c81bcd5444fc7056ef1f5a5df4c9220b6fd70d7449267f1f0f2991892908290030190a25050565b600154600160a060020a031633146101ed57600080fd5b60015460008054604051600160a060020a0393841693909116917f343765429aea5a34b3ff6a3785a98a5abb2597aca87bfbb58632c173d585373a91a3600180546000805473ffffffffffffffffffffffffffffffffffffffff19908116600160a060020a03841617909155169055565b600054600160a060020a031681565b600154600160a060020a031681565b600054600160a060020a0316331461029057fe5b600054600160a060020a03828116911614156102ab57600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a723058200948618838b566412e4841879ae9a1ada45332dd4eb1db6fea1c63d2d1c640900029",
+  "sourceMap": "520:1020:10:-;;;748:42;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;364:5:12;:18;;-1:-1:-1;;;;;;364:18:12;372:10;364:18;;;520:1020:10;;;;;;",
+  "deployedSourceMap": "520:1020:10:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;965:121;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;965:121:10;;;;;;;;;-1:-1:-1;;;;;965:121:10;;;;;;;;;;;;;;1262:276;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;1262:276:10;;;-1:-1:-1;;;;;1262:276:10;;;;;;;964:182:12;;8:9:-1;5:2;;;30:1;27;20:12;5:2;964:182:12;;;;155:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;155:20:12;;;;181:23;;8:9:-1;5:2;;;30:1;27;20:12;5:2;181:23:12;;;;742:137;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;742:137:12;-1:-1:-1;;;;;742:137:12;;;;;965:121:10;1029:7;1055:24;;;:9;:24;;;;;;-1:-1:-1;;;;;1055:24:10;;965:121::o;1262:276::-;487:5:12;;-1:-1:-1;;;;;487:5:12;473:10;:19;466:27;;;;1427:24:10;;;;:9;:24;;;;;;;;;:43;;-1:-1:-1;;1427:43:10;-1:-1:-1;;;;;1427:43:10;;;;;;;;1485:46;;;;;;;1427:24;;1485:46;;;;;;;;;1262:276;;:::o;964:182:12:-;1030:8;;-1:-1:-1;;;;;1030:8:12;1016:10;:22;1008:31;;;;;;1073:8;;;1066:5;;1054:28;;-1:-1:-1;;;;;1073:8:12;;;;1066:5;;;;1054:28;;;1100:8;;;;1092:16;;-1:-1:-1;;1092:16:12;;;-1:-1:-1;;;;;1100:8:12;;1092:16;;;;1118:21;;;964:182::o;155:20::-;;;-1:-1:-1;;;;;155:20:12;;:::o;181:23::-;;;-1:-1:-1;;;;;181:23:12;;:::o;742:137::-;487:5;;-1:-1:-1;;;;;487:5:12;473:10;:19;466:27;;;;836:5;;-1:-1:-1;;;;;823:18:12;;;836:5;;823:18;;815:27;;;;;;852:8;:20;;-1:-1:-1;;852:20:12;-1:-1:-1;;;;;852:20:12;;;;;;;;;;742:137::o",
+  "source": "pragma solidity ^0.4.21;\nimport './Owned.sol';\nimport './interfaces/IContractRegistry.sol';\n\n/**\n    Contract Registry\n\n    The contract registry keeps contract addresses by name.\n    The owner can update contract addresses so that a contract name always points to the latest version\n    of the given contract.\n    Other contracts can query the registry to get updated addresses instead of depending on specific\n    addresses.\n\n    Note that contract names are limited to 32 bytes, UTF8 strings to optimize gas costs\n*/\ncontract ContractRegistry is IContractRegistry, Owned {\n    mapping (bytes32 => address) addresses;\n\n    event AddressUpdate(bytes32 indexed _contractName, address _contractAddress);\n\n    /**\n        @dev constructor\n    */\n    function ContractRegistry() public {\n    }\n\n    /**\n        @dev returns the address associated with the given contract name\n\n        @param _contractName    contract name\n\n        @return contract address\n    */\n    function getAddress(bytes32 _contractName) public view returns (address) {\n        return addresses[_contractName];\n    }\n\n    /**\n        @dev registers a new address for the contract name\n\n       @param _contractName     contract name\n       @param _contractAddress  contract address\n    */\n    function registerAddress(bytes32 _contractName, address _contractAddress) public ownerOnly {\n        require(_contractName.length > 0); // validating input\n\n        addresses[_contractName] = _contractAddress;\n        emit AddressUpdate(_contractName, _contractAddress);\n    }\n}\n",
+  "sourcePath": "/home/shudal/Projects/BlockChain/NickTalk/contracts/utility/ContractRegistry.sol",
+  "ast": {
+    "absolutePath": "/home/shudal/Projects/BlockChain/NickTalk/contracts/utility/ContractRegistry.sol",
+    "exportedSymbols": {
+      "ContractRegistry": [
+        1118
+      ]
+    },
+    "id": 1119,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1057,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:10"
+      },
+      {
+        "absolutePath": "/home/shudal/Projects/BlockChain/NickTalk/contracts/utility/Owned.sol",
+        "file": "./Owned.sol",
+        "id": 1058,
+        "nodeType": "ImportDirective",
+        "scope": 1119,
+        "sourceUnit": 1295,
+        "src": "25:21:10",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/shudal/Projects/BlockChain/NickTalk/contracts/utility/interfaces/IContractRegistry.sol",
+        "file": "./interfaces/IContractRegistry.sol",
+        "id": 1059,
+        "nodeType": "ImportDirective",
+        "scope": 1119,
+        "sourceUnit": 1644,
+        "src": "47:44:10",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1060,
+              "name": "IContractRegistry",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1643,
+              "src": "549:17:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IContractRegistry_$1643",
+                "typeString": "contract IContractRegistry"
+              }
+            },
+            "id": 1061,
+            "nodeType": "InheritanceSpecifier",
+            "src": "549:17:10"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1062,
+              "name": "Owned",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1294,
+              "src": "568:5:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Owned_$1294",
+                "typeString": "contract Owned"
+              }
+            },
+            "id": 1063,
+            "nodeType": "InheritanceSpecifier",
+            "src": "568:5:10"
+          }
+        ],
+        "contractDependencies": [
+          1294,
+          1643,
+          1660
+        ],
+        "contractKind": "contract",
+        "documentation": "Contract Registry\nThe contract registry keeps contract addresses by name.\nThe owner can update contract addresses so that a contract name always points to the latest version\nof the given contract.\nOther contracts can query the registry to get updated addresses instead of depending on specific\naddresses.\nNote that contract names are limited to 32 bytes, UTF8 strings to optimize gas costs",
+        "fullyImplemented": true,
+        "id": 1118,
+        "linearizedBaseContracts": [
+          1118,
+          1294,
+          1660,
+          1643
+        ],
+        "name": "ContractRegistry",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1067,
+            "name": "addresses",
+            "nodeType": "VariableDeclaration",
+            "scope": 1118,
+            "src": "580:38:10",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_address_$",
+              "typeString": "mapping(bytes32 => address)"
+            },
+            "typeName": {
+              "id": 1066,
+              "keyType": {
+                "id": 1064,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "589:7:10",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "580:28:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_address_$",
+                "typeString": "mapping(bytes32 => address)"
+              },
+              "valueType": {
+                "id": 1065,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "600:7:10",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1073,
+            "name": "AddressUpdate",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1072,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1069,
+                  "indexed": true,
+                  "name": "_contractName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1073,
+                  "src": "645:29:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1068,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "645:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1071,
+                  "indexed": false,
+                  "name": "_contractAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1073,
+                  "src": "676:24:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1070,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "676:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "644:57:10"
+            },
+            "src": "625:77:10"
+          },
+          {
+            "body": {
+              "id": 1076,
+              "nodeType": "Block",
+              "src": "783:7:10",
+              "statements": []
+            },
+            "documentation": "@dev constructor",
+            "id": 1077,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "ContractRegistry",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1074,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "773:2:10"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1075,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "783:0:10"
+            },
+            "scope": 1118,
+            "src": "748:42:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1088,
+              "nodeType": "Block",
+              "src": "1038:48:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 1084,
+                      "name": "addresses",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1067,
+                      "src": "1055:9:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_bytes32_$_t_address_$",
+                        "typeString": "mapping(bytes32 => address)"
+                      }
+                    },
+                    "id": 1086,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 1085,
+                      "name": "_contractName",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1079,
+                      "src": "1065:13:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1055:24:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 1083,
+                  "id": 1087,
+                  "nodeType": "Return",
+                  "src": "1048:31:10"
+                }
+              ]
+            },
+            "documentation": "@dev returns the address associated with the given contract name\n@param _contractName    contract name\n@return contract address",
+            "id": 1089,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1080,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1079,
+                  "name": "_contractName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1089,
+                  "src": "985:21:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1078,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "985:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "984:23:10"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1083,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1082,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1089,
+                  "src": "1029:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1081,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1029:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1028:9:10"
+            },
+            "scope": 1118,
+            "src": "965:121:10",
+            "stateMutability": "view",
+            "superFunction": 1642,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1116,
+              "nodeType": "Block",
+              "src": "1353:185:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        },
+                        "id": 1102,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 1099,
+                            "name": "_contractName",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1091,
+                            "src": "1371:13:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          },
+                          "id": 1100,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "length",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "1371:20:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 1101,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1394:1:10",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        "src": "1371:24:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 1098,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1704,
+                        1705
+                      ],
+                      "referencedDeclaration": 1704,
+                      "src": "1363:7:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 1103,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1363:33:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1104,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1363:33:10"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1109,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1105,
+                        "name": "addresses",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1067,
+                        "src": "1427:9:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_address_$",
+                          "typeString": "mapping(bytes32 => address)"
+                        }
+                      },
+                      "id": 1107,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1106,
+                        "name": "_contractName",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1091,
+                        "src": "1437:13:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1427:24:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1108,
+                      "name": "_contractAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1093,
+                      "src": "1454:16:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1427:43:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 1110,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1427:43:10"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1112,
+                        "name": "_contractName",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1091,
+                        "src": "1499:13:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1113,
+                        "name": "_contractAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1093,
+                        "src": "1514:16:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 1111,
+                      "name": "AddressUpdate",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1073,
+                      "src": "1485:13:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_bytes32_$_t_address_$returns$__$",
+                        "typeString": "function (bytes32,address)"
+                      }
+                    },
+                    "id": 1114,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1485:46:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1115,
+                  "nodeType": "EmitStatement",
+                  "src": "1480:51:10"
+                }
+              ]
+            },
+            "documentation": "@dev registers a new address for the contract name\n@param _contractName     contract name\n@param _contractAddress  contract address",
+            "id": 1117,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 1096,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1095,
+                  "name": "ownerOnly",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1249,
+                  "src": "1343:9:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1343:9:10"
+              }
+            ],
+            "name": "registerAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1094,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1091,
+                  "name": "_contractName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1117,
+                  "src": "1287:21:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1090,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1287:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1093,
+                  "name": "_contractAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1117,
+                  "src": "1310:24:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1092,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1310:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1286:49:10"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1097,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1353:0:10"
+            },
+            "scope": 1118,
+            "src": "1262:276:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1119,
+        "src": "520:1020:10"
+      }
+    ],
+    "src": "0:1541:10"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/shudal/Projects/BlockChain/NickTalk/contracts/utility/ContractRegistry.sol",
+    "exportedSymbols": {
+      "ContractRegistry": [
+        1118
+      ]
+    },
+    "id": 1119,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1057,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:10"
+      },
+      {
+        "absolutePath": "/home/shudal/Projects/BlockChain/NickTalk/contracts/utility/Owned.sol",
+        "file": "./Owned.sol",
+        "id": 1058,
+        "nodeType": "ImportDirective",
+        "scope": 1119,
+        "sourceUnit": 1295,
+        "src": "25:21:10",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/shudal/Projects/BlockChain/NickTalk/contracts/utility/interfaces/IContractRegistry.sol",
+        "file": "./interfaces/IContractRegistry.sol",
+        "id": 1059,
+        "nodeType": "ImportDirective",
+        "scope": 1119,
+        "sourceUnit": 1644,
+        "src": "47:44:10",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1060,
+              "name": "IContractRegistry",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1643,
+              "src": "549:17:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IContractRegistry_$1643",
+                "typeString": "contract IContractRegistry"
+              }
+            },
+            "id": 1061,
+            "nodeType": "InheritanceSpecifier",
+            "src": "549:17:10"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1062,
+              "name": "Owned",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1294,
+              "src": "568:5:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Owned_$1294",
+                "typeString": "contract Owned"
+              }
+            },
+            "id": 1063,
+            "nodeType": "InheritanceSpecifier",
+            "src": "568:5:10"
+          }
+        ],
+        "contractDependencies": [
+          1294,
+          1643,
+          1660
+        ],
+        "contractKind": "contract",
+        "documentation": "Contract Registry\nThe contract registry keeps contract addresses by name.\nThe owner can update contract addresses so that a contract name always points to the latest version\nof the given contract.\nOther contracts can query the registry to get updated addresses instead of depending on specific\naddresses.\nNote that contract names are limited to 32 bytes, UTF8 strings to optimize gas costs",
+        "fullyImplemented": true,
+        "id": 1118,
+        "linearizedBaseContracts": [
+          1118,
+          1294,
+          1660,
+          1643
+        ],
+        "name": "ContractRegistry",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1067,
+            "name": "addresses",
+            "nodeType": "VariableDeclaration",
+            "scope": 1118,
+            "src": "580:38:10",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_address_$",
+              "typeString": "mapping(bytes32 => address)"
+            },
+            "typeName": {
+              "id": 1066,
+              "keyType": {
+                "id": 1064,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "589:7:10",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "580:28:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_address_$",
+                "typeString": "mapping(bytes32 => address)"
+              },
+              "valueType": {
+                "id": 1065,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "600:7:10",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1073,
+            "name": "AddressUpdate",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1072,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1069,
+                  "indexed": true,
+                  "name": "_contractName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1073,
+                  "src": "645:29:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1068,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "645:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1071,
+                  "indexed": false,
+                  "name": "_contractAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1073,
+                  "src": "676:24:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1070,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "676:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "644:57:10"
+            },
+            "src": "625:77:10"
+          },
+          {
+            "body": {
+              "id": 1076,
+              "nodeType": "Block",
+              "src": "783:7:10",
+              "statements": []
+            },
+            "documentation": "@dev constructor",
+            "id": 1077,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "ContractRegistry",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1074,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "773:2:10"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1075,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "783:0:10"
+            },
+            "scope": 1118,
+            "src": "748:42:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1088,
+              "nodeType": "Block",
+              "src": "1038:48:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 1084,
+                      "name": "addresses",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1067,
+                      "src": "1055:9:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_bytes32_$_t_address_$",
+                        "typeString": "mapping(bytes32 => address)"
+                      }
+                    },
+                    "id": 1086,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 1085,
+                      "name": "_contractName",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1079,
+                      "src": "1065:13:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1055:24:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 1083,
+                  "id": 1087,
+                  "nodeType": "Return",
+                  "src": "1048:31:10"
+                }
+              ]
+            },
+            "documentation": "@dev returns the address associated with the given contract name\n@param _contractName    contract name\n@return contract address",
+            "id": 1089,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1080,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1079,
+                  "name": "_contractName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1089,
+                  "src": "985:21:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1078,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "985:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "984:23:10"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1083,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1082,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1089,
+                  "src": "1029:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1081,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1029:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1028:9:10"
+            },
+            "scope": 1118,
+            "src": "965:121:10",
+            "stateMutability": "view",
+            "superFunction": 1642,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1116,
+              "nodeType": "Block",
+              "src": "1353:185:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        },
+                        "id": 1102,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 1099,
+                            "name": "_contractName",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1091,
+                            "src": "1371:13:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          },
+                          "id": 1100,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "length",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "1371:20:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 1101,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1394:1:10",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        "src": "1371:24:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 1098,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1704,
+                        1705
+                      ],
+                      "referencedDeclaration": 1704,
+                      "src": "1363:7:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 1103,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1363:33:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1104,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1363:33:10"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1109,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1105,
+                        "name": "addresses",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1067,
+                        "src": "1427:9:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_address_$",
+                          "typeString": "mapping(bytes32 => address)"
+                        }
+                      },
+                      "id": 1107,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1106,
+                        "name": "_contractName",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1091,
+                        "src": "1437:13:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1427:24:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1108,
+                      "name": "_contractAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1093,
+                      "src": "1454:16:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1427:43:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 1110,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1427:43:10"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1112,
+                        "name": "_contractName",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1091,
+                        "src": "1499:13:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1113,
+                        "name": "_contractAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1093,
+                        "src": "1514:16:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 1111,
+                      "name": "AddressUpdate",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1073,
+                      "src": "1485:13:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_bytes32_$_t_address_$returns$__$",
+                        "typeString": "function (bytes32,address)"
+                      }
+                    },
+                    "id": 1114,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1485:46:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1115,
+                  "nodeType": "EmitStatement",
+                  "src": "1480:51:10"
+                }
+              ]
+            },
+            "documentation": "@dev registers a new address for the contract name\n@param _contractName     contract name\n@param _contractAddress  contract address",
+            "id": 1117,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 1096,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1095,
+                  "name": "ownerOnly",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1249,
+                  "src": "1343:9:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1343:9:10"
+              }
+            ],
+            "name": "registerAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1094,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1091,
+                  "name": "_contractName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1117,
+                  "src": "1287:21:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1090,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1287:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1093,
+                  "name": "_contractAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1117,
+                  "src": "1310:24:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1092,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1310:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1286:49:10"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1097,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1353:0:10"
+            },
+            "scope": 1118,
+            "src": "1262:276:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1119,
+        "src": "520:1020:10"
+      }
+    ],
+    "src": "0:1541:10"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.8",
+  "updatedAt": "2019-05-06T02:37:43.876Z",
+  "devdoc": {
+    "methods": {
+      "acceptOwnership()": {
+        "details": "used by a new owner to accept an ownership transfer"
+      },
+      "getAddress(bytes32)": {
+        "details": "returns the address associated with the given contract name",
+        "params": {
+          "_contractName": "contract name"
+        },
+        "return": "contract address"
+      },
+      "registerAddress(bytes32,address)": {
+        "details": "registers a new address for the contract name",
+        "params": {
+          "_contractAddress": "contract address",
+          "_contractName": "contract name"
+        }
+      },
+      "transferOwnership(address)": {
+        "details": "allows transferring the contract ownership the new owner still needs to accept the transfer can only be called by the contract owner",
+        "params": {
+          "_newOwner": "new contract owner"
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -1,0 +1,353 @@
+{
+  "contractName": "MainServer",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdrawTokens",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "acceptOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "newOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_prevOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnerUpdate",
+      "type": "event"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.4.24+commit.e67f0147\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"_token\",\"type\":\"address\"},{\"name\":\"_to\",\"type\":\"address\"},{\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"withdrawTokens\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"acceptOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"newOwner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"_prevOwner\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"_newOwner\",\"type\":\"address\"}],\"name\":\"OwnerUpdate\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"acceptOwnership()\":{\"details\":\"used by a new owner to accept an ownership transfer\"},\"transferOwnership(address)\":{\"details\":\"allows transferring the contract ownership the new owner still needs to accept the transfer can only be called by the contract owner\",\"params\":{\"_newOwner\":\"new contract owner\"}},\"withdrawTokens(address,address,uint256)\":{\"details\":\"withdraws tokens held by the contract and sends them to an account can only be called by the owner\",\"params\":{\"_amount\":\"amount to withdraw\",\"_to\":\"account to receive the new amount\",\"_token\":\"ERC20 token contract address\"}}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/shudal/Projects/BlockChain/NickTalk/contracts/server/MainServer.sol\":\"MainServer\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/shudal/Projects/BlockChain/NickTalk/contracts/server/MainServer.sol\":{\"keccak256\":\"0x9fa6f0e056153db81dd84d7ac57890512a887287ddab7a09cc6e94d922d74bab\",\"urls\":[\"bzzr://40edc685ad5d8eb8b677778df73cc74e6bda892cca8bd82463c1343e72d0cd0c\"]},\"/home/shudal/Projects/BlockChain/NickTalk/contracts/token/interfaces/IERC20Token.sol\":{\"keccak256\":\"0xe2c787fd3eebc61309f137ed9632c2b77219171c9ab1d8aab8f444ade791c19b\",\"urls\":[\"bzzr://62a540c4cf222e642d98eeaa796b17040ba9ff2b418e995a560a599caf70f37e\"]},\"/home/shudal/Projects/BlockChain/NickTalk/contracts/utility/Owned.sol\":{\"keccak256\":\"0xcfe877a1861adc601a5522a6e34687a0ca9d44e5b7cbad3d881a41d1a7628506\",\"urls\":[\"bzzr://024e440644d84ce83fb0dce39806c40c80f220cba69ebcb0187541b17b8a4f74\"]},\"/home/shudal/Projects/BlockChain/NickTalk/contracts/utility/TokenHolder.sol\":{\"keccak256\":\"0xcbcfcf6648e5eb893c97c4844a45637af6acfb458a688d085a48bccff02ec246\",\"urls\":[\"bzzr://df126086276df97697593d9d686740cd9447daf1d06d3dc126fc1a69acc39bc9\"]},\"/home/shudal/Projects/BlockChain/NickTalk/contracts/utility/Utils.sol\":{\"keccak256\":\"0x22341406e82fe1da6b86787741db5ce76bc13275900cae1d6fe240822a9b4fd3\",\"urls\":[\"bzzr://ec4a38a6dbc574ea31f49c105cb9c528accb678b6ba165f3f1576fd2af07f6a1\"]},\"/home/shudal/Projects/BlockChain/NickTalk/contracts/utility/interfaces/IOwned.sol\":{\"keccak256\":\"0x7165266069416d0d031dbf0ba7a43c0d33c39ac804219562472939356420a441\",\"urls\":[\"bzzr://4e459502722bb6ee8da98748e70eb0dee94ec057c5c4d80f1ced7e3a5fdbc756\"]},\"/home/shudal/Projects/BlockChain/NickTalk/contracts/utility/interfaces/ITokenHolder.sol\":{\"keccak256\":\"0x8c53853fd86033399d75f6688cc2bd21c1a34115cd1f181f8259f8555ce18a6c\",\"urls\":[\"bzzr://afe302c6b69ff5092f3e927cc0bb445cdb9c4488bb42ccccd1c5641286e3a4ce\"]}},\"version\":1}",
+  "bytecode": "0x608060405260008054600160a060020a03191633179055610358806100256000396000f30060806040526004361061006c5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416635e35359e811461007157806379ba50971461009d5780638da5cb5b146100b2578063d4ee1d90146100e3578063f2fde38b146100f8575b600080fd5b34801561007d57600080fd5b5061009b600160a060020a0360043581169060243516604435610119565b005b3480156100a957600080fd5b5061009b610228565b3480156100be57600080fd5b506100c76102b0565b60408051600160a060020a039092168252519081900360200190f35b3480156100ef57600080fd5b506100c76102bf565b34801561010457600080fd5b5061009b600160a060020a03600435166102ce565b600054600160a060020a0316331461012d57fe5b82600160a060020a038116151561014357600080fd5b82600160a060020a038116151561015957600080fd5b83600160a060020a03811630141561017057600080fd5b85600160a060020a031663a9059cbb86866040518363ffffffff167c01000000000000000000000000000000000000000000000000000000000281526004018083600160a060020a0316600160a060020a0316815260200182815260200192505050602060405180830381600087803b1580156101ec57600080fd5b505af1158015610200573d6000803e3d6000fd5b505050506040513d602081101561021657600080fd5b5051151561022057fe5b505050505050565b600154600160a060020a0316331461023f57600080fd5b60015460008054604051600160a060020a0393841693909116917f343765429aea5a34b3ff6a3785a98a5abb2597aca87bfbb58632c173d585373a91a3600180546000805473ffffffffffffffffffffffffffffffffffffffff19908116600160a060020a03841617909155169055565b600054600160a060020a031681565b600154600160a060020a031681565b600054600160a060020a031633146102e257fe5b600054600160a060020a03828116911614156102fd57600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a72305820685fe200f044a6e8fbd3060aefb62bcd9111804a78344aa280d0669bfbad45fc0029",
+  "deployedBytecode": "0x60806040526004361061006c5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416635e35359e811461007157806379ba50971461009d5780638da5cb5b146100b2578063d4ee1d90146100e3578063f2fde38b146100f8575b600080fd5b34801561007d57600080fd5b5061009b600160a060020a0360043581169060243516604435610119565b005b3480156100a957600080fd5b5061009b610228565b3480156100be57600080fd5b506100c76102b0565b60408051600160a060020a039092168252519081900360200190f35b3480156100ef57600080fd5b506100c76102bf565b34801561010457600080fd5b5061009b600160a060020a03600435166102ce565b600054600160a060020a0316331461012d57fe5b82600160a060020a038116151561014357600080fd5b82600160a060020a038116151561015957600080fd5b83600160a060020a03811630141561017057600080fd5b85600160a060020a031663a9059cbb86866040518363ffffffff167c01000000000000000000000000000000000000000000000000000000000281526004018083600160a060020a0316600160a060020a0316815260200182815260200192505050602060405180830381600087803b1580156101ec57600080fd5b505af1158015610200573d6000803e3d6000fd5b505050506040513d602081101561021657600080fd5b5051151561022057fe5b505050505050565b600154600160a060020a0316331461023f57600080fd5b60015460008054604051600160a060020a0393841693909116917f343765429aea5a34b3ff6a3785a98a5abb2597aca87bfbb58632c173d585373a91a3600180546000805473ffffffffffffffffffffffffffffffffffffffff19908116600160a060020a03841617909155169055565b600054600160a060020a031681565b600154600160a060020a031681565b600054600160a060020a031633146102e257fe5b600054600160a060020a03828116911614156102fd57600080fd5b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a72305820685fe200f044a6e8fbd3060aefb62bcd9111804a78344aa280d0669bfbad45fc0029",
+  "sourceMap": "95:45:2:-;;;364:5:9;:18;;-1:-1:-1;;;;;;364:18:9;372:10;364:18;;;95:45:2;;;;;;",
+  "deployedSourceMap": "95:45:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;908:241:10;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;908:241:10;-1:-1:-1;;;;;908:241:10;;;;;;;;;;;;;;964:182:9;;8:9:-1;5:2;;;30:1;27;20:12;5:2;964:182:9;;;;155:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;155:20:9;;;;;;;;-1:-1:-1;;;;;155:20:9;;;;;;;;;;;;;;181:23;;8:9:-1;5:2;;;30:1;27;20:12;5:2;181:23:9;;;;742:137;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;742:137:9;-1:-1:-1;;;;;742:137:9;;;;;908:241:10;487:5:9;;-1:-1:-1;;;;;487:5:9;473:10;:19;466:27;;;;1036:6:10;-1:-1:-1;;;;;435:22:11;;;;427:31;;;;;;1065:3:10;-1:-1:-1;;;;;435:22:11;;;;427:31;;;;;;1086:3:10;-1:-1:-1;;;;;608:25:11;;628:4;608:25;;600:34;;;;;;1112:6:10;-1:-1:-1;;;;;1112:15:10;;1128:3;1133:7;1112:29;;;;;;;;;;;;;-1:-1:-1;;;;;1112:29:10;-1:-1:-1;;;;;1112:29:10;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1112:29:10;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1112:29:10;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1112:29:10;1105:37;;;;;;468:1:11;;503::9;908:241:10;;;:::o;964:182:9:-;1030:8;;-1:-1:-1;;;;;1030:8:9;1016:10;:22;1008:31;;;;;;1073:8;;;1066:5;;1054:28;;-1:-1:-1;;;;;1073:8:9;;;;1066:5;;;;1054:28;;;1100:8;;;;1092:16;;-1:-1:-1;;1092:16:9;;;-1:-1:-1;;;;;1100:8:9;;1092:16;;;;1118:21;;;964:182::o;155:20::-;;;-1:-1:-1;;;;;155:20:9;;:::o;181:23::-;;;-1:-1:-1;;;;;181:23:9;;:::o;742:137::-;487:5;;-1:-1:-1;;;;;487:5:9;473:10;:19;466:27;;;;836:5;;-1:-1:-1;;;;;823:18:9;;;836:5;;823:18;;815:27;;;;;;852:8;:20;;-1:-1:-1;;852:20:9;-1:-1:-1;;;;;852:20:9;;;;;;;;;;742:137::o",
+  "source": "pragma solidity ^0.4.24;\n\nimport '../utility/Owned.sol';\nimport \"../utility/TokenHolder.sol\";\n\ncontract MainServer is Owned, TokenHolder{\n\n}",
+  "sourcePath": "/home/shudal/Projects/BlockChain/NickTalk/contracts/server/MainServer.sol",
+  "ast": {
+    "absolutePath": "/home/shudal/Projects/BlockChain/NickTalk/contracts/server/MainServer.sol",
+    "exportedSymbols": {
+      "MainServer": [
+        117
+      ]
+    },
+    "id": 118,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 110,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "absolutePath": "/home/shudal/Projects/BlockChain/NickTalk/contracts/utility/Owned.sol",
+        "file": "../utility/Owned.sol",
+        "id": 111,
+        "nodeType": "ImportDirective",
+        "scope": 118,
+        "sourceUnit": 641,
+        "src": "26:30:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/shudal/Projects/BlockChain/NickTalk/contracts/utility/TokenHolder.sol",
+        "file": "../utility/TokenHolder.sol",
+        "id": 112,
+        "nodeType": "ImportDirective",
+        "scope": 118,
+        "sourceUnit": 687,
+        "src": "57:36:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 113,
+              "name": "Owned",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 640,
+              "src": "118:5:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Owned_$640",
+                "typeString": "contract Owned"
+              }
+            },
+            "id": 114,
+            "nodeType": "InheritanceSpecifier",
+            "src": "118:5:2"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 115,
+              "name": "TokenHolder",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 686,
+              "src": "125:11:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_TokenHolder_$686",
+                "typeString": "contract TokenHolder"
+              }
+            },
+            "id": 116,
+            "nodeType": "InheritanceSpecifier",
+            "src": "125:11:2"
+          }
+        ],
+        "contractDependencies": [
+          640,
+          686,
+          807,
+          853,
+          869
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 117,
+        "linearizedBaseContracts": [
+          117,
+          686,
+          807,
+          640,
+          869,
+          853
+        ],
+        "name": "MainServer",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 118,
+        "src": "95:45:2"
+      }
+    ],
+    "src": "0:140:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/shudal/Projects/BlockChain/NickTalk/contracts/server/MainServer.sol",
+    "exportedSymbols": {
+      "MainServer": [
+        117
+      ]
+    },
+    "id": 118,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 110,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "absolutePath": "/home/shudal/Projects/BlockChain/NickTalk/contracts/utility/Owned.sol",
+        "file": "../utility/Owned.sol",
+        "id": 111,
+        "nodeType": "ImportDirective",
+        "scope": 118,
+        "sourceUnit": 641,
+        "src": "26:30:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/shudal/Projects/BlockChain/NickTalk/contracts/utility/TokenHolder.sol",
+        "file": "../utility/TokenHolder.sol",
+        "id": 112,
+        "nodeType": "ImportDirective",
+        "scope": 118,
+        "sourceUnit": 687,
+        "src": "57:36:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 113,
+              "name": "Owned",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 640,
+              "src": "118:5:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Owned_$640",
+                "typeString": "contract Owned"
+              }
+            },
+            "id": 114,
+            "nodeType": "InheritanceSpecifier",
+            "src": "118:5:2"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 115,
+              "name": "TokenHolder",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 686,
+              "src": "125:11:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_TokenHolder_$686",
+                "typeString": "contract TokenHolder"
+              }
+            },
+            "id": 116,
+            "nodeType": "InheritanceSpecifier",
+            "src": "125:11:2"
+          }
+        ],
+        "contractDependencies": [
+          640,
+          686,
+          807,
+          853,
+          869
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 117,
+        "linearizedBaseContracts": [
+          117,
+          686,
+          807,
+          640,
+          869,
+          853
+        ],
+        "name": "MainServer",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 118,
+        "src": "95:45:2"
+      }
+    ],
+    "src": "0:140:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.8",
+  "updatedAt": "2019-05-06T03:11:11.836Z",
+  "devdoc": {
+    "methods": {
+      "acceptOwnership()": {
+        "details": "used by a new owner to accept an ownership transfer"
+      },
+      "transferOwnership(address)": {
+        "details": "allows transferring the contract ownership the new owner still needs to accept the transfer can only be called by the contract owner",
+        "params": {
+          "_newOwner": "new contract owner"
+        }
+      },
+      "withdrawTokens(address,address,uint256)": {
+        "details": "withdraws tokens held by the contract and sends them to an account can only be called by the owner",
+        "params": {
+          "_amount": "amount to withdraw",
+          "_to": "account to receive the new amount",
+          "_token": "ERC20 token contract address"
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
